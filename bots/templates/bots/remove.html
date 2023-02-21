@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "./base.html" %}
+
+{% block title %}Remove bot{% endblock %}
+{% block description %}Remove your bot{% endblock %}
+
+{% block section1 %}
     <h1>Remove your bot</h1>
 
     <form method="post">
@@ -14,5 +13,4 @@
         &nbsp;
         <a href="{% url 'bots:detail' bot.id %}">Back</a>
     </form>
-</body>
-</html>
+{% endblock %}

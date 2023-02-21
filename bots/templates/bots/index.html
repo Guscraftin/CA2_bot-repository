@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
-<link rel="stylesheet" href="{% static 'bots/style.css' %}">
+{% extends "./base.html" %}
 
+{% block title %}{% endblock %}
+{% block description %}Home{% endblock %}
 
+{% block section1 %}
 <h1>Find Your Discord Bot</h1>
 
 {% if latest_bot_list %}
@@ -16,3 +17,4 @@
 {% endif %}
 
 <a href="{% url 'bots:add' %}">Add a bot</a>
+{% endblock %}

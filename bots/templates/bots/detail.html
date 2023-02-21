@@ -1,16 +1,23 @@
-<fieldset>
-    <legend><h1>{{ bot.bot_name }}</h1></legend>
+{% extends "./base.html" %}
 
-    <p>Author: {{ bot.author }}</p>
-    <p>Added date: {{ bot.add_date }}</p>
-    <p>Votes: {{ bot.votes }}</p>
+{% block title %}Bot Detail{% endblock %}
+{% block description %}A bot detail{% endblock %}
 
-    <p>Description: {{ bot.description }}</p>
-</fieldset>
+{% block section1 %}
+    <fieldset>
+        <legend><h1>{{ bot.bot_name }}</h1></legend>
 
-<a href="{% url 'bots:vote' bot.id %}">Vote</a>
-<a href="{% url 'bots:update' bot.id %}">Update</a>
-<a href="{% url 'bots:remove' bot.id %}">Remove this bot</a>
-<br>
-<br>
-<a href="{% url 'bots:index' %}">Home</a>
+        <p>Author: {{ bot.author }}</p>
+        <p>Added date: {{ bot.add_date }}</p>
+        <p>Votes: {{ bot.votes }}</p>
+
+        <p>Description: {{ bot.description }}</p>
+    </fieldset>
+
+    <a href="{% url 'bots:vote' bot.id %}">Vote</a>
+    <a href="{% url 'bots:update' bot.id %}">Update</a>
+    <a href="{% url 'bots:remove' bot.id %}">Remove this bot</a>
+    <br>
+    <br>
+    <a href="{% url 'bots:index' %}">Home</a>
+{% endblock %}

@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <title>discordBot | Update a bot</title>
-</head>
-<body>
+{% extends "./base.html" %}
+
+{% block title %}Update your bot{% endblock %}
+{% block description %}Update your discord bot{% endblock %}
+
+{% block section1 %}
     <h1>Update your discord bot</h1>
 
     <form method="post">
@@ -15,5 +13,4 @@
         &nbsp;
         <a href="{% url 'bots:detail' bot.id %}">Back</a>
     </form>
-</body>
-</html>
+{% endblock %}
