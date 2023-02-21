@@ -1,3 +1,10 @@
 li a {
     color: #5865F2; /* Official discord color */
 }
+
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    max-width: 100%;
+}
