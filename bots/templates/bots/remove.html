@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Remove your bot</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ object }}" ?</p>
+        <input type="submit" value="Confirm">
+        &nbsp;
+        <a href="{% url 'bots:detail' bot.id %}">Back</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<fieldset>
+    <legend><h1>{{ bot.bot_name }}</h1></legend>
+
+    <p>Author: {{ bot.author }}</p>
+    <p>Added date: {{ bot.add_date }}</p>
+    <p>Votes: {{ bot.votes }}</p>
+
+    <p>Description: {{ bot.description }}</p>
+</fieldset>
+
+<a href="{% url 'bots:vote' bot.id %}">Vote</a>
+<a href="{% url 'bots:update' bot.id %}">Update</a>
+<a href="{% url 'bots:remove' bot.id %}">Remove this bot</a>
+<br>
+<br>
+<a href="{% url 'bots:index' %}">Home</a>
