@@ -4,6 +4,7 @@ from django.db import migrations, models
 import django.db.models.deletion
 
 
+# Thanks to models.py, django was able to generate a migration of these models to the database.
 class Migration(migrations.Migration):
 
     initial = True

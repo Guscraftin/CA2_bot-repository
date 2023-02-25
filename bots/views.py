@@ -8,6 +8,8 @@ from .forms import *
 from .models import Bot, Author
 
 
+# All views of the application "bots", ie all functions used when opening a page of this application.
+
 class IndexView(generic.ListView):
     template_name = 'bots/index.html'
     context_object_name = 'latest_bot_list'
@@ -44,6 +46,9 @@ class VoteView(generic.View):
     model = Bot
 
     def get(self, request, *args, **kwargs):
+        """
+        Returns all the information of a bot
+        """
         bot_id = self.kwargs.get('pk')
         bot = Bot.objects.get(id=bot_id)
         bot.votes += 1
@@ -57,6 +62,9 @@ class UpdateView(generic.UpdateView):
     form_class = UpdateBotForm
 
     def get_success_url(self):
+        """
+        Redirects the page to the DetailView when the user has validated the form
+        """
         return reverse('bots:detail', args=(self.kwargs.get('pk'),))
 
 

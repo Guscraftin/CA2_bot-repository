@@ -7,6 +7,8 @@ from django.urls import reverse
 from .models import Author, Bot
 
 
+# All the tests to verify that the application is working properly are performed.
+
 class BotModelTests(TestCase):
 
     def test_bot_was_added_in_the_future(self):

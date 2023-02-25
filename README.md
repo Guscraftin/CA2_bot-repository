@@ -9,5 +9,5 @@ This is a website that allows to list discord bots.
 
 
 - [ ] Tests
-- [ ] Comment
+- [x] Comment
 - [ ] README.md (this document)

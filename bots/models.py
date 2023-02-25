@@ -4,6 +4,7 @@ from django.db import models
 from django.utils import timezone
 
 
+# All the models that allow to organize and structure the database.
 class Author(models.Model):
     author_name = models.CharField(max_length=200)
     join_date = models.DateTimeField('date joined')

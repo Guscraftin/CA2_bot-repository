@@ -3,6 +3,7 @@ from django.contrib import admin
 from .models import Author, Bot
 
 
+# All changes made to the django admin panel
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('author_name', 'join_date')
 

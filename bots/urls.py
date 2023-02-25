@@ -2,6 +2,7 @@ from django.urls import path
 
 from . import views
 
+# All possible urls after the domain-name/bots
 app_name = 'bots'
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
