@@ -18,6 +18,7 @@ Finally, we created a nice interface for the application.
 
 This is the limitation of this version of this app
 - Now, all people who can access to the app can update the database without verification and security
+- User interface very old
 
 
 ## Possible extension
@@ -26,15 +27,3 @@ In the future, we can add some functionalities, like:
 - A login account (so user need to connect to this account for integrate the database)
 - More option to the bot (filters in the indexView)
 - A better front-end
-
-## ToDo List
-
-- [ ] Front-end - Nav Bar
-- [ ] Front-end - Footer
-- [ ] Front-end - Home Page
-- [ ] Front-end - User Page
-
-
-- [ ] Tests
-- [x] Comment
-- [ ] README.md (this document)

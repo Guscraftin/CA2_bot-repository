@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Discord Catalog | {% block title %}Home Page{% endblock %}</title>
+    <meta name="description" content={% block description %}"This is a main directory of discord."{% endblock %}>
+{#    <link rel="icon" type="image/x-icon" href="{% static 'bots/images/favicon.ico %}">#}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bots/style.css' %}">
+
+
+</head>
+{# This is the web page that will be displayed by default when a page is called by a view. #}
+{# (This uses override variables in the other files in this folder to customize them). #}
+<body>
+    <nav></nav>
+    <header></header>
+
+    <main>
+        <section>
+            {% block section1 %}Section1 of the page{% endblock %}
+        </section>
+
+        <section></section>
+    </main>
+
+    <footer>
+
+        <div class="content-footer">
+            <div class="block footer-presentation">
+                <h3>Presentation</h3>
+                <p>DiscordCatalog is a directory of discord bot.</p>
+            </div>
+
+            <div class="block footer-catalog">
+                <h3>Catalog</h3>
+                <ul class="list-catalog">
+                    <li><a href="#">Discord Bots</a></li>
+                    <li><a href="#">Discord Server</a></li>
+                </ul>
+            </div>
+
+            <div class="block footer-links">
+                <h3>Links</h3>
+                <ul class="list-links">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </div>
+
+            <div class="block footer-socials">
+                <h3>Socials</h3>
+                <ul class="list-socials">
+                    <li><a href="#"><img src="{% static 'bots/img/discord-icon.svg' %}" alt="Discord icon">Discord</a></li>
+                    <li><a href="#"><img src="{% static 'bots/img/github-icon.svg' %}" alt="GitHub icon">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="break-line"></div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; <script>document.write(`${new Date().getFullYear()}`)</script> discordDirectory. All Right Reserved.</p>
+        </div>
+
+    </footer>
+</body>
+</html>
