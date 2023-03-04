@@ -27,3 +27,20 @@ In the future, we can add some functionalities, like:
 - A login account (so user need to connect to this account for integrate the database)
 - More option to the bot (filters in the indexView)
 - A better front-end
+
+
+---
+# CA2_bot-repository
+
+## ToDo List
+
+- [ ] Front-end - Nav Bar
+- [x] Front-end - Footer
+- [ ] Front-end - Home Page
+- [ ] Front-end - Bot Page
+- [ ] Front-end - User Page
+
+
+- [ ] Tests
+- [ ] Comment
+- [ ] README.md (this document)
