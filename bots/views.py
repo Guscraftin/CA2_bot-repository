@@ -29,7 +29,7 @@ class IndexView(generic.ListView):
 # This is the view that allows you to see the details of a bot
 class DetailView(generic.DetailView):
     model = Bot
-    template_name = 'bots/detail.html'
+    template_name = 'bots/detail/detail.html'
 
     def get_queryset(self):
         """
@@ -41,7 +41,7 @@ class DetailView(generic.DetailView):
 # This is the view to add a new bot
 class AddView(generic.CreateView):
     model = Bot
-    template_name = 'bots/add.html'
+    template_name = 'bots/add/add.html'
     form_class = AddBotForm
     success_url = "/bots"
 
@@ -64,7 +64,7 @@ class VoteView(generic.View):
 # This is the view to update the bot
 class UpdateView(generic.UpdateView):
     model = Bot
-    template_name = "bots/update.html"
+    template_name = "bots/update/update.html"
     form_class = UpdateBotForm
 
     def get_success_url(self):
@@ -77,7 +77,7 @@ class UpdateView(generic.UpdateView):
 # This is the view to confirm the deletion of a bot
 class RemoveView(generic.DeleteView):
     model = Bot
-    template_name = 'bots/remove.html'
+    template_name = 'bots/remove/remove.html'
     success_url = "/bots"
 
 
