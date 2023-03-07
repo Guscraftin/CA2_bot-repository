@@ -5,7 +5,7 @@ from django.views import generic
 from django.utils import timezone
 from .forms import *
 
-from .models import Bot, Author
+from .models import Bot
 
 
 # All views of the application "bots", ie all functions used when opening a page of this application.
@@ -39,11 +39,17 @@ class DetailView(generic.DetailView):
 
 
 # This is the view to add a new bot
-class AddView(generic.CreateView):
-    model = Bot
-    template_name = 'bots/add/add.html'
-    form_class = AddBotForm
-    success_url = "/bots"
+def AddView(request):
+    form = AddBotForm
+    try:
+        bot_name = request.POST['bot_name']
+        description = request.POST['description']
+    except (KeyError, Bot.DoesNotExist):
+        return render(request, 'bots/add/add.html', {})
+    else:
+        bot = Bot(author=request.user, bot_name=bot_name, add_date=timezone.now(), votes=0, description=description)
+        bot.save()
+        return HttpResponseRedirect(reverse('bots:detail', args=(bot.id,)))
 
 
 # This is the view to vote to a bot (no visible)

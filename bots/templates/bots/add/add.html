@@ -6,9 +6,8 @@
 {% block section1 %}
     <h1>Add your discord bot</h1>
 
-    <form method="post">
+    <form action="{% url 'bots:add' %}" method="post">
         {% csrf_token %}
-        {{ form }}
         <input type="submit" value="Add">
         &nbsp;
         <a href="{% url 'bots:index' %}">Back</a>

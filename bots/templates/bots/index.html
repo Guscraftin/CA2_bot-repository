@@ -15,8 +15,12 @@
 {% else %}
     <p>No bots are available.</p>
 {% endif %}
-
-<a href="{% url 'bots:add' %}">Add a bot</a>
+<br>
+{% if user.is_authenticated %}
+    <a href="{% url 'bots:add' %}">Add a bot</a>
+{% else %}
+    <p>You need to login to add a new bot.</p>
+{% endif %}
 <br>
 <a href="{% url 'home' %}">Home</a>
 {% endblock %}
