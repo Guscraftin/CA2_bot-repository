@@ -15,8 +15,8 @@
     </fieldset>
     <br>
 {% if user.is_authenticated %}
+    <a href="{% url 'bots:vote' bot.id %}">Vote</a>
     {% if bot.author.id == user.id %}
-        <a href="{% url 'bots:vote' bot.id %}">Vote</a>
         <a href="{% url 'bots:update' bot.id %}">Update</a>
         <a href="{% url 'bots:remove' bot.id %}">Remove this bot</a>
     {% endif %}
