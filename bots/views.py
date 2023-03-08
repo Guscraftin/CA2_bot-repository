@@ -39,7 +39,18 @@ class DetailView(generic.DetailView):
 
 
 # This is the view to add a new bot
-def AddView(request):
+class AddView(generic.FormView):
+    template_name = 'bots/add/add.html'
+    form_class = AddBotForm
+    success_url = '/'
+
+    def form_valid(self, form):
+        bot = form.addBot(self.request.user)
+        return HttpResponseRedirect(reverse('bots:detail', args=(bot.id,)))
+
+
+
+'''def AddView(request):
     form = AddBotForm
     try:
         bot_name = request.POST['bot_name']
@@ -50,6 +61,7 @@ def AddView(request):
         bot = Bot(author=request.user, bot_name=bot_name, add_date=timezone.now(), votes=0, description=description)
         bot.save()
         return HttpResponseRedirect(reverse('bots:detail', args=(bot.id,)))
+'''
 
 
 # This is the view to vote to a bot (no visible)
