@@ -23,6 +23,41 @@ li a {
     color: var(--main-discord-color);
 }
 
+/*
+ * Home Page
+ */
+h1 {
+    color: var(--main-discord-color);
+    text-align: center;
+    font-size: calc(64px + (112 - 64) * ((100vw - 320px) / (1600 - 320)));
+    margin-bottom: 24px;
+}
+
+p {
+    text-align: center;
+    padding: 15px 18px 30px;
+}
+
+.btn {
+    color: white;
+    background-color: var(--main-discord-color);
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.btn-home-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 75px);
+}
+.btn:hover {
+    background-color: #3747f1;
+}
+
+
 
 /*
 * FOOTER

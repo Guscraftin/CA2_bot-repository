@@ -1,11 +1,11 @@
-{% extends "./../base.html" %}
+{% extends "base.html" %}
 
 {% block title %}Bot Detail{% endblock %}
 {% block description %}"A bot detail"{% endblock %}
 
 {% block section1 %}
     <fieldset>
-        <legend><h1>{{ bot.bot_name }}</h1></legend>
+        <legend><h2>{{ bot.bot_name }}</h2></legend>
 
         <p>Author: {{ bot.author }}</p>
         <p>Added date: {{ bot.add_date }}</p>

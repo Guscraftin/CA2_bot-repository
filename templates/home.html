@@ -1,21 +1,16 @@
 {% extends 'base.html' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home Page{% endblock %}
+{% block description %}"This is the main page of a discord bot directory."{% endblock %}
 
-{% block content %}
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-  <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-  <br>
-  <br>
-  <a href="{% url 'signup' %}">Create a New Account</a>
-    <br>
-{% endif %}
-    <br>
-    <p><a href="{% url 'bots:index' %}">Bots Directory</a></p>
+{% block section1 %}
+    <div class="home-page">
+        <h1>Discord Directory</h1>
+
+        <p>Discord Directory is this website where you can find the best bot for you.</p>
+        <!-- Do responsive (grow button and text in function of screen) -->
+
+        <a class="btn btn-home-page" href="{% url 'bots:index' %}">Bots Directory</a>
+    </div>
 {% endblock %}
 
