@@ -21,15 +21,10 @@
     <br>
     <a href="{% url 'bots:add' %}">Add a bot</a>
     <br>
-    <p><a href="{% url 'logout' %}">Log Out</a></p>
     <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
 {% else %}
     <p>You are not logged in</p>
-    <a href="{% url 'login' %}">Log In</a>
-    <br>
-    <a href="{% url 'signup' %}">Create a New Account</a>
-    <br>
 {% endif %}
     <br>
-<a href="{% url 'home' %}">Home</a>
+<!-- <a href="{% url 'home' %}">Home</a> # For the future -->
 {% endblock %}

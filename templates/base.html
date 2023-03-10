@@ -17,7 +17,21 @@
 {# This is the web page that will be displayed by default when a page is called by a view. #}
 {# (This uses override variables in the other files in this folder to customize them). #}
 <body>
-    <nav></nav>
+    <nav>
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+            <ul>
+                <li><a href="/" id="home-left">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href={% url 'signup' %}>Signup</a></li>
+                    <li><a href={% url 'login' %}>Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
     <header></header>
 
     <main>

@@ -9,7 +9,7 @@
 
 body {
     background: #f1f1f1;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, cursive;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,11 +26,37 @@ li a {
 /*
  * Home Page
  */
+
+/* Navbar */
+nav {
+    background-color: #5865F2;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+.menu ul {
+    text-align: center;
+    list-style-type: none;
+}
+.menu li {
+    float: left;
+    padding: 14px 16px;
+}
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+.menu li:hover {
+    background-color: #3747f1;
+}
+
+/*  */
 h1 {
     color: var(--main-discord-color);
     text-align: center;
-    font-size: calc(64px + (112 - 64) * ((100vw - 320px) / (1600 - 320)));
-    margin-bottom: 24px;
+    font-size: calc(40px + (112 - 40) * ((100vw - 320px) / (1600 - 320)));
+    margin: 24px;
 }
 
 p {
