@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: 72070@student.college-dorset.ie
+Date: Mon, 13 Mar 2023 11:23:56 -0000
+Message-ID: 
+ <167870663654.14580.17458637279787794304@DESKTOP-52670UK.customer.ask4.lan>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/Ng/bkzznw-3a655a7e37c40abf9680038d282c65b5/
+
+Your username, in case you’ve forgotten: gus
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
