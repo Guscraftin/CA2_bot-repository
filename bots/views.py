@@ -23,7 +23,7 @@ class IndexView(generic.ListView):
         """
         return Bot.objects.filter(
             add_date__lte=timezone.now()
-        ).order_by('-add_date')[:10]
+        ).order_by('-votes')[:10]
 
 
 # This is the view that allows you to see the details of a bot
