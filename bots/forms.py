@@ -3,6 +3,7 @@ from .models import Bot
 
 from django.utils import timezone
 
+
 # All custom forms that will be displayed and used in the views.
 class AddBotForm(forms.Form):
     """

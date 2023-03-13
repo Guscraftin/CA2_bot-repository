@@ -49,21 +49,6 @@ class AddView(generic.FormView):
         return HttpResponseRedirect(reverse('bots:detail', args=(bot.id,)))
 
 
-
-'''def AddView(request):
-    form = AddBotForm
-    try:
-        bot_name = request.POST['bot_name']
-        description = request.POST['description']
-    except (KeyError, Bot.DoesNotExist):
-        return render(request, 'bots/add/add.html', {})
-    else:
-        bot = Bot(author=request.user, bot_name=bot_name, add_date=timezone.now(), votes=0, description=description)
-        bot.save()
-        return HttpResponseRedirect(reverse('bots:detail', args=(bot.id,)))
-'''
-
-
 # This is the view to vote to a bot (no visible)
 class VoteView(generic.View):
     model = Bot
@@ -96,6 +81,6 @@ class UpdateView(generic.UpdateView):
 class RemoveView(generic.DeleteView):
     model = Bot
     template_name = 'bots/remove/remove.html'
-    success_url = "/bots"
+    success_url = '/'
 
 

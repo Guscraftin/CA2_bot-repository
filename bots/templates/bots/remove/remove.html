@@ -9,8 +9,10 @@
     <form method="post">
         {% csrf_token %}
         <p>Are you sure you want to delete "{{ object }}" ?</p>
-        <input type="submit" value="Confirm">
-        &nbsp;
-        <a href="{% url 'bots:detail' bot.id %}">Back</a>
+
+        <div class="container-btn">
+            <input class="btn" type="submit" value="Confirm">
+            <a class="btn" href="{% url 'bots:index' %}">Back</a>
+        </div>
     </form>
 {% endblock %}

@@ -4,10 +4,14 @@
 {% block description %}"This is the page for created an account."{% endblock %}
 
 {% block section1 %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign Up</button>
-  </form>
+    <h1>Sign up</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form">
+            {{ form.as_p }}
+        </div>
+        <div class="container-btn">
+            <button class="btn" type="submit">Sign Up</button>
+        </div>
+    </form>
 {% endblock %}

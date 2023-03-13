@@ -8,23 +8,23 @@
 
 {% if latest_bot_list %}
     <ul>
-    {% for bot in latest_bot_list %}
-        <li><a href="{% url 'bots:detail' bot.id %}">{{ bot.bot_name }}</a></li>
-    {% endfor %}
+    <div class="container-btn">
+        {% for bot in latest_bot_list %}
+            <li><a href="{% url 'bots:detail' bot.id %}">{{ bot.bot_name }}</a></li>
+        {% endfor %}
+    </div>
     </ul>
 {% else %}
     <p>No bots are available.</p>
 {% endif %}
-<br>
 {% if user.is_authenticated %}
-    Hi {{ user.username }}!
-    <br>
-    <a href="{% url 'bots:add' %}">Add a bot</a>
-    <br>
-    <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+    <h3>Hi {{ user.username }}!</h3>
+    <div class="container-btn">
+    <a class="btn" href="{% url 'bots:add' %}">Add a bot</a>
+    <a class="btn" href="{% url 'password_reset' %}">Reset Password</a>
+    </div>
 {% else %}
     <p>You are not logged in</p>
 {% endif %}
-    <br>
 <!-- <a href="{% url 'home' %}">Home</a> # For the future -->
 {% endblock %}

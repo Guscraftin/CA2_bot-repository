@@ -4,10 +4,14 @@
 {% block description %}"Login to your account"{% endblock %}
 
 {% block section1 %}
-<h2>Log In</h2>
+<h1>Log In</h1>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
+  <div class="form">
+    {{ form.as_p }}
+  </div>
+  <div class="container-btn">
+    <button class="btn" type="submit">Log In</button>
+  </div>
 </form>
 {% endblock %}
