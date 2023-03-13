@@ -14,19 +14,21 @@
         <p>Description: {{ bot.description }}</p>
     </fieldset>
     <br>
-    <div class="container-btn">
-        {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
+        <div class="container-btn">
             <a class="btn" href="{% url 'bots:vote' bot.id %}">Vote</a>
             {% if bot.author.id == user.id %}
                 <a class="btn" href="{% url 'bots:update' bot.id %}">Update</a>
                 <a class="btn" href="{% url 'bots:remove' bot.id %}">Remove this bot</a>
             {% endif %}
-        {% else %}
-            <p>You need to log in to update the bot.</p>
-        {% endif %}
-        <br>
-        <br>
-        <br>
+        </div>
+    {% else %}
+        <p>You need to log in to update the bot.</p>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <div class="container-btn">
         <a class="btn" href="{% url 'bots:index' %}">Back</a>
     </div>
 {% endblock %}
