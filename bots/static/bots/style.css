@@ -1,3 +1,7 @@
+/*
+ * Main settings
+ */
+
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -17,10 +21,6 @@ body {
 
 main {
     flex: 1 0 auto; /* Footer always at the bottom */
-}
-
-li a {
-    color: var(--main-discord-color);
 }
 
 /*
@@ -59,16 +59,20 @@ h1 {
     margin: 24px;
 }
 
+.form, h2, h3 {
+    text-align: center;
+}
+
 p {
     text-align: center;
     padding: 15px 18px 30px;
 }
 
-
-.form, h2, h3 {
-    text-align: center;
+li a {
+    color: var(--main-discord-color);
 }
 
+/* All buttons */
 .container-btn {
     padding-top: 20px;
     height: 180px;

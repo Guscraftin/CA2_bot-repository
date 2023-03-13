@@ -8,6 +8,7 @@ from .models import Bot
 
 
 # All the tests to verify that the application is working properly are performed.
+# It will be reviewed and completed for the CA3
 
 class BotModelTests(TestCase):
 

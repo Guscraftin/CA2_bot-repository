@@ -8,6 +8,9 @@ from django.contrib.auth.models import User
 
 # All the models that allow to organize and structure the database.
 class Bot(models.Model):
+    """
+    Model of a discord bot
+    """
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     bot_name = models.CharField(max_length=32)
     add_date = models.DateTimeField('date added', default=timezone.now)

@@ -7,9 +7,7 @@ from django.utils import timezone
 # All custom forms that will be displayed and used in the views.
 class AddBotForm(forms.Form):
     """
-    class Meta:
-        model = Bot
-        fields = ["bot_name", "description"]
+    Form to create a discord bot
     """
     bot_name = forms.CharField()
     description = forms.CharField()
@@ -22,6 +20,9 @@ class AddBotForm(forms.Form):
 
 
 class UpdateBotForm(forms.ModelForm):
+    """
+    Form to update a discord bot
+    """
     class Meta:
         model = Bot
         fields = ["bot_name", "description"]

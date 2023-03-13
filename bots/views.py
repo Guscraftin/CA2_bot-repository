@@ -11,8 +11,10 @@ from .models import Bot
 # All views of the application "bots", ie all functions used when opening a page of this application.
 
 
-# This is the main view for bot discord directory
 class IndexView(generic.ListView):
+    """
+    This is the main view for bot discord directory
+    """
     template_name = 'bots/index.html'
     context_object_name = 'latest_bot_list'
 
@@ -26,8 +28,10 @@ class IndexView(generic.ListView):
         ).order_by('-votes')[:10]
 
 
-# This is the view that allows you to see the details of a bot
 class DetailView(generic.DetailView):
+    """
+    This is the view that allows you to see the details of a bot
+    """
     model = Bot
     template_name = 'bots/detail/detail.html'
 
@@ -38,8 +42,10 @@ class DetailView(generic.DetailView):
         return Bot.objects.filter(add_date__lte=timezone.now())
 
 
-# This is the view to add a new bot
 class AddView(generic.FormView):
+    """
+    This is the view to add a new bot
+    """
     template_name = 'bots/add/add.html'
     form_class = AddBotForm
     success_url = '/'
@@ -49,8 +55,10 @@ class AddView(generic.FormView):
         return HttpResponseRedirect(reverse('bots:detail', args=(bot.id,)))
 
 
-# This is the view to vote to a bot (no visible)
 class VoteView(generic.View):
+    """
+    This is the view to vote to a bot (no visible)
+    """
     model = Bot
 
     def get(self, request, *args, **kwargs):
@@ -64,8 +72,10 @@ class VoteView(generic.View):
         return HttpResponseRedirect(reverse('bots:detail', args=(bot_id,)))
 
 
-# This is the view to update the bot
 class UpdateView(generic.UpdateView):
+    """
+    This is the view to update the bot
+    """
     model = Bot
     template_name = "bots/update/update.html"
     form_class = UpdateBotForm
@@ -77,8 +87,10 @@ class UpdateView(generic.UpdateView):
         return reverse('bots:detail', args=(self.kwargs.get('pk'),))
 
 
-# This is the view to confirm the deletion of a bot
 class RemoveView(generic.DeleteView):
+    """
+    This is the view to confirm the deletion of a bot
+    """
     model = Bot
     template_name = 'bots/remove/remove.html'
     success_url = '/'
